@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Player</title>
+    <style>
+      /* Style the form and input elements */
+      form {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      input[type="text"] {
+        width: 60%;
+      }
+      button[type="submit"] {
+        width: 20%;
+      }
+      /* Style the video player */
+      video#player {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 510px;
+        width: 950px;
+  <link rel="stylesheet" href="dark-theme.css">
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Player</h1>
+    <form>
+      <input type="text" id="video-url" />
+      <button type="submit">Play</button>
+    </form>
+    <br />
+    <video id="player" controls>
+        <source src="my-video.webm" type="video/webm">
+        <source src="my-video.mkv" type="video/x-matroska">
+        <source src="my-video.flv" type="video/x-flv">
+        <source src="my-video.vob" type="video/vob">
+        <source src="my-video.ogv" type="video/ogg">
+        <source src="my-video.ogg" type="video/ogg">
+        <source src="my-video.rrc" type="application/rrc">
+        <source src="my-video.gifv" type="video/gifv">
+        <source src="my-video.mng" type="video/mng">
+        <source src="my-video.mov" type="video/quicktime">
+        <source src="my-video.avi" type="video/x-msvideo">
+        <source src="my-video.qt" type="video/quicktime">
+        <source src="my-video.wmv" type="video/x-ms-wmv">
+        <source src="my-video.yuv" type="video/yuv">
+        <source src="my-video.rm" type="application/vnd.rn-realmedia">
+        <source src="my-video.asf" type="video/x-ms-asf">
+        <source src="my-video.amv" type="video/amv">
+        <source src="my-video.mp4" type="video/mp4">
+        <source src="my-video.m4p" type="video/mp4">
+        <source src="my-video.m4v" type="video/mp4">
+        <source src="my-video.mpg" type="video/mpeg">
+        <source src="my-video.mp2" type="video/mpeg">
+        <source src="my-video.mpeg" type="video/mpeg">
+        <source src="my-video.mpe" type="video/mpeg">
+        <source src="my-video.mpv" type="video/mpeg">
+        <source src="my-video.m4v" type="video/mpeg">
+        <source src="my-video.svi" type="video/svi">
+        <source src="my-video.3gp" type="video/3gpp">
+        <source src="my-video.3g2" type="video/3gpp2">
+        <source src="my-video.mxf" type="application/mxf">
+        <source src="my-video.roq" type="video/roq">
+        <source src="my-video.nsv" type="video/nsv">
+        <source src="my-video.f4v" type="video/x-f4v">
+        <source src="my-video.f4p" type="video/x-f4p">
+        <source src="my-video.f4a" type="audio/mp4">
+        <source src="my-video.f4b" type="video/mp4">
+        <source src="my-video.mod" type="video/mod">
+      </video>            
+    <script>
+      // Get the video URL input and player elements
+      const urlInput = document.querySelector('#video-url');
+      const player = document.querySelector('#player');
+
+      // Listen for the form submission
+      document.querySelector('form').addEventListener('submit', (event) => {
+        // Prevent the form from actually submitting
+        event.preventDefault();
+
+        // Update the player's src attribute with the entered URL
+        player.src = urlInput.value;
+      });
+    </script>
+  </body>
+</html>
